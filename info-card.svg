@@ -77,9 +77,9 @@
   <circle cx="28" cy="26" r="6" fill="#ff5f56" />
   <circle cx="48" cy="26" r="6" fill="#ffbd2e" />
   <circle cx="68" cy="26" r="6" fill="#27c93f" />
-  <text class="title-text" x="245.0" y="31" text-anchor="middle">channabasava@terminal</text>
+  <text class="title-text" x="245.0" y="31" text-anchor="middle">channabasav7@terminal</text>
   <g class="line line-0">
-    <text class="terminal-text" x="35" y="75"><tspan class="prompt-text">channabasava@github</tspan> <tspan class="prompt-text">~</tspan> <tspan class="prompt-text">$</tspan> ./resume.sh</text>
+    <text class="terminal-text" x="35" y="75"><tspan class="prompt-text">channabasav7@github</tspan> <tspan class="prompt-text">~</tspan> <tspan class="prompt-text">$</tspan> ./resume.sh</text>
   </g>
   <g class="line line-1">
     <text class="terminal-text" x="35" y="101" opacity="0.3">--------------------------------------</text>

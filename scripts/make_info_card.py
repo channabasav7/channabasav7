@@ -10,7 +10,7 @@ def generate_info_card(svg_path):
     is_static = os.environ.get("STATIC") == "1"
     
     lines = [
-        ("prompt", "channabasava@github ~ $ ./resume.sh"),
+        ("prompt", "channabasav7@github ~ $ ./resume.sh"),
         ("separator", "--------------------------------------"),
         ("info", "OS", "Android / iOS / Web / Desktop"),
         ("info", "Host", "channabasava.vercel.app"),
@@ -111,7 +111,7 @@ def generate_info_card(svg_path):
     svg_content.append('  <circle cx="68" cy="26" r="6" fill="#27c93f" />')
     
     # Title Text
-    svg_content.append(f'  <text class="title-text" x="{width/2}" y="31" text-anchor="middle">channabasava@terminal</text>')
+    svg_content.append(f'  <text class="title-text" x="{width/2}" y="31" text-anchor="middle">channabasav7@terminal</text>')
     
     # Content Area
     start_y = 75
@@ -126,7 +126,7 @@ def generate_info_card(svg_path):
         svg_content.append(f'  <g{class_str}>')
         
         if line_type == "prompt":
-            svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}"><tspan class="prompt-text">channabasava@github</tspan> <tspan class="prompt-text">~</tspan> <tspan class="prompt-text">$</tspan> ./resume.sh</text>')
+            svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}"><tspan class="prompt-text">channabasav7@github</tspan> <tspan class="prompt-text">~</tspan> <tspan class="prompt-text">$</tspan> ./resume.sh</text>')
         elif line_type in ["separator", "separator2", "separator3"]:
             svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}" opacity="0.3">{item[1]}</text>')
         elif line_type == "info":
