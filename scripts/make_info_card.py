@@ -2,7 +2,7 @@ import os
 import sys
 
 def generate_info_card(svg_path):
-    # Terminal properties
+    # Terminal dimensions
     width = 490
     height = 570
     
@@ -10,18 +10,20 @@ def generate_info_card(svg_path):
     is_static = os.environ.get("STATIC") == "1"
     
     lines = [
-        ("prompt", "channabasav7@github ~ $ ./neofetch.sh"),
+        ("prompt", "channabasava@github ~ $ ./resume.sh"),
         ("separator", "--------------------------------------"),
-        ("info", "OS", "GitHub Profile README"),
-        ("info", "Host", "github.com/channabasav7"),
-        ("info", "Kernel", "SVG / Python 3.11 / GH Actions"),
-        ("info", "Uptime", "Live since 2023"),
-        ("info", "Shell", "powershell / bash"),
+        ("info", "OS", "Android / iOS / Web / Desktop"),
+        ("info", "Host", "channabasava.vercel.app"),
+        ("info", "Kernel", "Flutter & Android Developer"),
+        ("info", "Education", "B.E. CS @ MVJ College of Engg (2027)"),
+        ("info", "Location", "Bengaluru, India"),
+        ("info", "Shell", "Dart / Kotlin / Python / SQL"),
         ("separator2", ""),
-        ("info", "Role", "Fullstack & Mobile Developer"),
-        ("info", "Stack", "Flutter, Dart, Python, React, Node.js"),
-        ("info", "Projects", "Viora (Flutter), Land Registration"),
-        ("info", "Highlights", "Mobile Developer, Web3 Tech Enthusiast"),
+        ("info", "Languages", "Dart, Kotlin, Java, Python, SQL, JS"),
+        ("info", "Frameworks", "Flutter, Firebase, REST APIs, HTML/CSS"),
+        ("info", "Projects", "Food Delivery App, AI Voice Assistant"),
+        ("info", "Awards", "3rd Place @ Hack-A-League 4.0"),
+        ("info", "Sentinel", "(SSE, Bloom Filters, Cryptography)"),
         ("separator3", ""),
         ("colors_header", "System Colors:"),
         ("colors", "")
@@ -109,7 +111,7 @@ def generate_info_card(svg_path):
     svg_content.append('  <circle cx="68" cy="26" r="6" fill="#27c93f" />')
     
     # Title Text
-    svg_content.append(f'  <text class="title-text" x="{width/2}" y="31" text-anchor="middle">channabasav7@terminal</text>')
+    svg_content.append(f'  <text class="title-text" x="{width/2}" y="31" text-anchor="middle">channabasava@terminal</text>')
     
     # Content Area
     start_y = 75
@@ -124,12 +126,16 @@ def generate_info_card(svg_path):
         svg_content.append(f'  <g{class_str}>')
         
         if line_type == "prompt":
-            svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}"><tspan class="prompt-text">channabasav7@github</tspan> <tspan class="prompt-text">~</tspan> <tspan class="prompt-text">$</tspan> neofetch</text>')
+            svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}"><tspan class="prompt-text">channabasava@github</tspan> <tspan class="prompt-text">~</tspan> <tspan class="prompt-text">$</tspan> ./resume.sh</text>')
         elif line_type in ["separator", "separator2", "separator3"]:
             svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}" opacity="0.3">{item[1]}</text>')
         elif line_type == "info":
             label, val = item[1], item[2]
-            svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}"><tspan class="label-text">{label}:</tspan> {val}</text>')
+            # Special formatting for Sentinel detail line (no label)
+            if label == "Sentinel":
+                svg_content.append(f'    <text class="terminal-text" x="110" y="{y_pos}">{val}</text>')
+            else:
+                svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}"><tspan class="label-text">{label}:</tspan> {val}</text>')
         elif line_type == "colors_header":
             svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}" style="fill: var(--title-text); font-weight: bold;">{item[1]}</text>')
         elif line_type == "colors":
