@@ -131,13 +131,17 @@ def generate_info_card(svg_path):
             svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}" opacity="0.3">{item[1]}</text>')
         elif line_type == "info":
             label, val = item[1], item[2]
+            # Escape XML entities
+            label = label.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+            val = val.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
             # Special formatting for Sentinel detail line (no label)
             if label == "Sentinel":
                 svg_content.append(f'    <text class="terminal-text" x="110" y="{y_pos}">{val}</text>')
             else:
                 svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}"><tspan class="label-text">{label}:</tspan> {val}</text>')
         elif line_type == "colors_header":
-            svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}" style="fill: var(--title-text); font-weight: bold;">{item[1]}</text>')
+            header_text = item[1].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+            svg_content.append(f'    <text class="terminal-text" x="35" y="{y_pos}" style="fill: var(--title-text); font-weight: bold;">{header_text}</text>')
         elif line_type == "colors":
             # Draw color block rectangles
             colors_list = ["#1f2328", "#ff5f56", "#27c93f", "#ffbd2e", "#58a6ff", "#bc8cff", "#39d353", "#c9d1d9"]
