@@ -432,8 +432,9 @@
   <rect class="contrib-box" x="748" y="113" width="10" height="10" fill="var(--color-1)" style="animation-delay: 0.855s;"><title>1 contributions on 2026-07-18</title></rect>
   <rect class="contrib-box" x="761" y="35" width="10" height="10" fill="var(--color-4)" style="animation-delay: 0.780s;"><title>15 contributions on 2026-07-19</title></rect>
   <rect class="contrib-box" x="761" y="48" width="10" height="10" fill="var(--color-3)" style="animation-delay: 0.795s;"><title>5 contributions on 2026-07-20</title></rect>
-  <rect class="contrib-box" x="761" y="61" width="10" height="10" fill="var(--color-0)" style="animation-delay: 0.810s;"><title>0 contributions on 2026-07-21</title></rect>
-  <text class="label" x="85" y="152" style="font-weight: 600;">225 contributions in the last year | Streak: 16 days (longest: 25 days)</text>
+  <rect class="contrib-box" x="761" y="61" width="10" height="10" fill="var(--color-3)" style="animation-delay: 0.810s;"><title>5 contributions on 2026-07-21</title></rect>
+  <rect class="contrib-box" x="761" y="74" width="10" height="10" fill="var(--color-0)" style="animation-delay: 0.825s;"><title>0 contributions on 2026-07-22</title></rect>
+  <text class="label" x="85" y="152" style="font-weight: 600;">230 contributions in the last year | Streak: 17 days (longest: 25 days)</text>
   <text class="label" x="620" y="152">Less</text>
   <rect class="contrib-box" x="652" y="142" width="10" height="10" fill="var(--color-0)" />
   <rect class="contrib-box" x="665" y="142" width="10" height="10" fill="var(--color-1)" />
